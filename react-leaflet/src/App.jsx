@@ -1,8 +1,10 @@
 import { useState } from "react";
 import "./App.css";
-import { MapContainer, Marker, TileLayer } from "react-leaflet";
+import { MapContainer, Marker, TileLayer, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
-import { popup } from "leaflet";
+import { Icon } from "leaflet";
+
+import markerIconPng from "./assets/marker-image.png";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -23,6 +25,11 @@ function App() {
     },
   ];
 
+  const customIcon = new Icon({
+    iconUrl: markerIconPng,
+    iconSize: [38, 38],
+  });
+
   return (
     <MapContainer center={[9.02497, 38.74689]} zoom={13}>
       {/* Center of the Map at Addis Ababa */}
@@ -31,9 +38,15 @@ function App() {
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
 
-      {markers.map((marker) => {
-        <Marker position={marker.geocode}></Marker>;
-      })}
+      {markers.map((marker) => (
+        <Marker
+          key={marker.geocode}
+          position={marker.geocode}
+          icon={customIcon}
+        >
+          <Popup>{marker.popup}</Popup>
+        </Marker>
+      ))}
     </MapContainer>
   );
 }
