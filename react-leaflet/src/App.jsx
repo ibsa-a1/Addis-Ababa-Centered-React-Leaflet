@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useEffect } from "react";
 import "./App.css";
-import { MapContainer, Marker, TileLayer, Popup } from "react-leaflet";
+import { MapContainer, Marker, TileLayer, Popup, useMap } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import { Icon, divIcon, point } from "leaflet";
 import MarkerClusterGroup from "react-leaflet-markercluster";
@@ -10,9 +10,25 @@ import L from "leaflet";
 
 import markerIconPng from "./assets/marker-image.png";
 
-function App() {
-  const [count, setCount] = useState(0);
+function GeocoderControl() {
+  const map = useMap();
 
+  useEffect(() => {
+    const geocoder = L.Control.geocoder({
+      defaultMarkGeocode: true,
+    })
+      .on("markgeocode", function (e) {
+        const bbox = e.geocode.bbox;
+        const bounds = L.latLngBounds(bbox);
+        map.fitBounds(bounds);
+      })
+      .addTo(map);
+  }, [map]);
+
+  return null;
+}
+
+function App() {
   const createClusterCustomIcon = function (cluster) {
     return new divIcon({
       html: `<span class="cluster-icon">${cluster.getChildCount()}</span>`,
