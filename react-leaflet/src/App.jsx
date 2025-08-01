@@ -29,8 +29,12 @@ function App() {
       popup: "Mercato",
     },
     {
-      geocode: [8.9598383, 38.7147487],
+      geocode: [8.96032, 38.711744],
       popup: "Jemo 1",
+    },
+    {
+      geocode: [8.9466212, 38.7244681],
+      popup: "Lebu",
     },
   ];
 
