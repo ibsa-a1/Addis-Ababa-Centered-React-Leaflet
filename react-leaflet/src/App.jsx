@@ -46,7 +46,16 @@ function App() {
   return (
     <div>
       <h1 className="map-title">🗺️ Addis Ababa Centered Map</h1>
-      <MapContainer center={[9.02497, 38.74689]} zoom={13}>
+      <MapContainer
+        center={[9.02497, 38.74689]}
+        zoom={13}
+        minZoom={6.4}
+        maxBounds={[
+          [0.5, 35.0], // Southwest (Nairobi, Kenya)
+          [15.5, 46.0], // Northeast (Asmara/Mogadishu)
+        ]}
+        maxBoundsViscosity={1.0}
+      >
         {/* Center of the Map at Addis Ababa */}
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
