@@ -4,6 +4,9 @@ import { MapContainer, Marker, TileLayer, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import { Icon, divIcon, point } from "leaflet";
 import MarkerClusterGroup from "react-leaflet-markercluster";
+import "leaflet-control-geocoder";
+import "leaflet-control-geocoder/dist/Control.Geocoder.css";
+import L from "leaflet";
 
 import markerIconPng from "./assets/marker-image.png";
 
