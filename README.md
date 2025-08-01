@@ -9,6 +9,7 @@ This project displays an interactive map centered on **Addis Ababa**, Ethiopia, 
 - 🌍 Map centered on Addis Ababa  
 - 📦 Marker clustering using `react-leaflet-markercluster`  
 - ✨ Responsive UI with styled borders and shadows
+- 🗺️ MaxBound to Ethiopia (More Local Map)
 
 ## 📌 Demo Locations
 
@@ -16,6 +17,7 @@ The map includes a few sample locations around Addis Ababa:
 - **Megenagna**
 - **Mercato**
 - **Jemo 1**
+- **Lebu**
 
 ## 🛠️ Tech Stack
 
@@ -57,6 +59,8 @@ npm run dev
 `http://localhost:5173`
 
 > This assumes you're using **Vite**. If you're using Create React App, use `npm start` instead.
+>
+> Don't forget to install dependencies like `leaflet`, `react-leaflet`, `react-leaflet-markercluster` to build same
 
 ## 📁 Project Structure
 
@@ -88,6 +92,7 @@ Markers use a local custom image from `./assets/marker-image.png`. You can repla
 - Implement a sidebar with location filters
 - Add user geolocation support
 - Add routing or direction features
+- Add search option to find places
 
 ## 📜 License
 
