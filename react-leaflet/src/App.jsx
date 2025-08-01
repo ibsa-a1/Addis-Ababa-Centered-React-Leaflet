@@ -41,7 +41,7 @@ function App() {
 
   return (
     <div>
-      <h1>Addis Ababa Centered Map</h1>
+      <h1 className="map-title">🗺️ Addis Ababa Centered Map</h1>
       <MapContainer center={[9.02497, 38.74689]} zoom={13}>
         {/* Center of the Map at Addis Ababa */}
         <TileLayer
