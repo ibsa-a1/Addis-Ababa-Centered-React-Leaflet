@@ -28,7 +28,8 @@ The map includes a few sample locations around Addis Ababa:
 
 ## 📷 Screenshots
 
-<img width="1846" height="937" alt="image" src="https://github.com/user-attachments/assets/53631e9a-a635-4728-a878-e7dfb79d2498" />
+<img width="1843" height="935" alt="image" src="https://github.com/user-attachments/assets/cb44a1be-1131-4b15-9482-1660cb758c97" />
+
 
 
 ## 📦 Installation
