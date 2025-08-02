@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import "./App.css";
 import { MapContainer, Marker, TileLayer, Popup, useMap } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
@@ -12,9 +12,13 @@ import markerIconPng from "./assets/marker-image.png";
 
 function GeocoderControl() {
   const map = useMap();
+  const controlRef = useRef(null);
 
   useEffect(() => {
-    const geocoder = L.Control.geocoder({
+    // Only add geocoder once
+    if (controlRef.current) return;
+
+    controlRef.current = L.Control.geocoder({
       defaultMarkGeocode: true,
     })
       .on("markgeocode", function (e) {
