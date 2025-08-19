@@ -1,4 +1,4 @@
-# 🗺️ [Addis Ababa Centered React Leaflet Map](https://www.addis-ababa-map.vercel.app/)
+# 🗺️ [Addis Ababa Centered React Leaflet Map](https://addis-ababa-map.vercel.app/)
 
 This project displays an interactive map centered on **Addis Ababa**, Ethiopia, using **React** and **React-Leaflet**. It features custom markers, beautiful cluster grouping, and smooth styling to visualize different locations within the city.
 
